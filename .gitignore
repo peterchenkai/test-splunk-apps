@@ -1,2 +1,4 @@
 test_corejs_widgets/build
 test_corejs_widgets/node_modules
+splunk_src
+*.spl
