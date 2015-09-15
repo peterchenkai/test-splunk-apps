@@ -1,5 +1,5 @@
 {
-  "name": "test_corejs",
+  "name": "test_corejs_widgets",
   "version": "0.0.1",
   "devDependencies": {
     "fs-extra": "^0.18.4",
