@@ -1,0 +1,14 @@
+{
+  "path": {
+    "splunk": {
+      "mrsparkle_dir": "",
+      "link_src": "splunk_src"
+    },
+    "app": {
+      "root": "build/appserver/static",
+      "dev_css": "package/appserver/static/css",
+      "css": "build/appserver/static/css",
+      "js": "build/appserver/static/js"
+    }
+  }
+}

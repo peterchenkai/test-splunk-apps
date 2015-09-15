@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<view template="test_corejs_widgets:templates/base.html" type="html" isDashboard="False">
+    <label>Components</label>
+</view>

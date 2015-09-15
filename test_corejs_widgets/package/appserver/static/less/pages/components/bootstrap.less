@@ -1,0 +1,86 @@
+// vars & mixins
+@import "base/shoestrap.less";
+
+@import "pages/datapreview-shared.less";
+@import "components/dropzone.less";
+@import "components/synthetic-slider.less";
+
+@import "../../components/SingleInputControl.less";
+@import "../../components/RadioInputGroupControl.less";
+@import "../../common/util.less";
+
+// common styles
+.main-section-body {
+  background-color: white;
+  background-image: none;
+}
+
+
+.app-page-body {
+	padding: 30px 0;
+}
+
+.tab-content {
+	padding: 20px 30px;
+}
+
+.control-section {
+	margin-bottom: 20px;
+}
+
+.description, .control-group .control-label {
+	margin: 20px 0 10px;
+	font-size: 14px;
+}
+
+.simple-controls .app-components-views-controls-singleinputcontrol{
+	.inline-single-input(250px);
+	.clear-both;
+}
+
+.multi-select-control {
+	width: 500px;
+}
+
+.control.shared-controls-textcontrol input {
+	width: 250px; 
+	padding-right: 6px;
+}
+
+.text-area-example {
+	width: 250px;
+}
+
+.controls .date-picker {
+	width: 236px;
+}
+
+.shared-controls-datecontrol.pull-left {
+	float: none;
+}
+
+.section {
+	margin-top: 30px;
+}
+
+.btn-example .btn {
+	margin-right: 20px;
+}
+
+.modal-footer .btn.pull-right {
+	width: 50px;
+	margin-left: 10px;
+}
+
+#icons-examples {
+	margin-bottom: 10px;
+
+	.icon-sample {
+		font-size: 24px;
+		margin-right: 16px;
+	}
+}
+
+.shared-dropdownmenu .icon-large {
+	margin-right: 4px;
+}

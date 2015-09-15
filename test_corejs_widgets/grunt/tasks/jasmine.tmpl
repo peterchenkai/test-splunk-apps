@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jasmine Test Runner</title>
+    <link rel="shortcut icon" type="image/png" href="<%= temp %>/jasmine_favicon.png">
+  <% css.forEach(function(style){ %>
+    <link rel="stylesheet" type="text/css" href="<%= style %>">
+  <% }) %>
+
+  <% with (scripts) { %>
+    <% [].concat(jasmine, boot, helpers).forEach(function(script){ %>
+        <script src="<%= script %>"></script>
+    <% }) %>
+  <% }; %>
+
+    <script src="test/contrib/sinon-1.14.1.js" type="text/javascript"></script>
+
+    <script src="splunk_src/exposed/js/i18n.js" type="text/javascript"></script>
+    <script src="test/common/mock_i18n.js" type="text/javascript"></script>
+
+    <script src="splunk_src/exposed/js/contrib/require.js" type="text/javascript"></script>
+    <script src="splunk_src/exposed/js/profiles/shared.js" type="text/javascript"></script>
+
+    <script>
+        var startTests = window.onload;
+        window.onload = null;
+        require.config({
+            baseUrl: "splunk_src/exposed/js",
+            "paths": {
+                "app": "../../../package/appserver/static/js",
+                "test":"../../../test"
+            }
+        });
+        // Define all of your specs here. These are RequireJS modules.
+        var specs = [
+            <% scripts.specs.forEach(function(script){ %>
+                "<%= script.slice(0,-3) %>",
+            <% }) %>
+            "<%= [].concat(scripts.reporters).join("','") %>"
+        ];
+
+        require(specs, function () {
+           //trigger Jasmine
+           startTests();
+        });
+    </script>
+</head>
+<body>
+<div class="test">
+</div>
+</body>
+</html>
